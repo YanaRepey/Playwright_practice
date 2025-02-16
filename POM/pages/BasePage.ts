@@ -4,6 +4,6 @@ export class BasePage {
     constructor(private page: Page) {}
 
     async openMainPage() {
-        await this.page.goto('https://guest:welcome2qauto@qauto.forstudy.space');
+        await this.page.goto(config.baseURL);
     }
 }
