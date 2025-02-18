@@ -1,4 +1,7 @@
 import { defineConfig, devices } from '@playwright/test';
+import { config } from './data.config';
+import * as dotenv from 'dotenv';
+dotenv.config();
 import { on } from 'events';
 
 /**
@@ -26,12 +29,13 @@ export default defineConfig({
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
-    // /* Base URL to use in actions like `await page.goto('/')`. */
-    baseURL: 'https://qauto.forstudy.space/',
-    httpCredentials: {
+    baseURL:
 
-      username: 'guest',
-      password: 'welcome2qauto',
+    // baseURL: 'https://qauto.forstudy.space/',
+    // httpCredentials: {
+
+    //   username: 'guest',
+    //   password: 'welcome2qauto',
 
     },
 
